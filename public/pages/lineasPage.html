@@ -1,0 +1,36 @@
+<div ng-app="stcu_app" ng-controller="controladorLineas">
+
+    <div ng-hide="editando">
+      <p class="titulo">LINEAS</p>
+      <div class="panel-body">
+  <a href="#!/linea/new" class="btn btn-primary btn-sm" role="button">New</a>
+</div>
+      <div class="row">
+            <div class="col-md-8">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Codigo</th>
+                    <th>Denominacion</th>
+                    <!--<th><button ng-click="nuevoCliente()" class="btn btn-sm btn-default">Nuevo</button></th>-->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="col in lineas">
+                    <td></td>
+                    <td>{{col.codigo}}</td>
+                    <td>{{col.denominacion}}</td>
+                    <!--
+                    <td><button ng-click="editar(cliente)" class="btn btn-sm btn-default">Editar</button>
+                        <button ng-click="eliminar(cliente)" class="btn btn-sm btn-default">Eliminar</button></td>
+                    -->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+    </div>
+
+
+    </div>

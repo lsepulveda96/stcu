@@ -1,0 +1,35 @@
+<div ng-app="stcu_app" ng-controller="controladorColectivo">
+
+    <div ng-hide="editando">
+      <p class="titulo">COLECTIVOS</p>
+      <div class="row">
+            <div class="col-md-8">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Id</th>
+                    <th>Patente</th>
+                    <th>Capacidad</th>
+                    <!--<th><button ng-click="nuevoCliente()" class="btn btn-sm btn-default">Nuevo</button></th>-->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="col in colectivos">
+                    <td></td>
+                    <td>{{col.id}}</td>
+                    <td>{{col.patente}}</td>
+                    <td>{{col.capacidad}}</td>
+                    <!-- 
+                    <td><button ng-click="editar(cliente)" class="btn btn-sm btn-default">Editar</button>
+                        <button ng-click="eliminar(cliente)" class="btn btn-sm btn-default">Eliminar</button></td>
+                    -->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+    </div>
+    
+    
+    </div>

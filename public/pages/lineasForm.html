@@ -1,0 +1,40 @@
+<div class="panel panel-default">
+
+	<div class="panel-heading">
+		<strong>Linea</strong>
+	</div>
+
+	<div class="panel-body">
+
+		<form class="form-horizontal">
+			<div class="form-group" ng-hide="action == 'new'">
+		    <label for="linea_id" class="col-md-2 control-label">Id</label>
+		    <div class="col-md-3">
+		      <input type="number" class="form-control" id="linea_id" placeholder="Id" ng-model="data.id" ng-disabled="action != 'new'"/>
+		  </div>
+			 </div>
+
+		  <div class="form-group">
+		    <label for="linea_denominacion" class="col-md-2 control-label">Denominacion</label>
+		    <div class="col-md-3">
+		      <input type="text" class="form-control" id="linea_denominacion" placeholder="Denominacion" ng-model="data.denominacion" ng-disabled="action == 'view'">
+		  	</div>
+      </div>
+
+	    <!-- <div class="form-group">
+		    <label for="linea_estado" class="col-md-2 control-label">Estado</label>
+		    <div class="col-md-3">
+		      <input type="text" class="form-control" id="linea_estado" placeholder="Estado" ng-model="data.estado" ng-disabled="action == 'view'">
+		    </div>
+           </div> -->
+
+				<div class="form-group">
+					<div class="col-md-offset-2 col-md-3">
+						<button type="submit" class="btn btn-primary" ng-click="save()" ng-show="action == 'new'">Create</button>
+						<!-- <button type="submit" class="btn btn-primary" ng-click="update()" ng-show="action == 'edit'">Update</button> -->
+						<button type="submit" class="btn btn-primary" ng-click="cancel()">Cancel</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>

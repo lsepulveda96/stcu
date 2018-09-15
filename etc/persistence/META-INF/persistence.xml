@@ -1,0 +1,30 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
+  <!-- <persistence-unit name="STCUService"> -->
+  <persistence-unit name="stcu">
+    <jta-data-source>stcur</jta-data-source> <!-- nombre del JNDI -->
+    <class>model.Colectivo</class>
+    <class>model.Linea</class>
+    <class>model.Parada</class>
+
+    <properties>
+      <!-- <property name="eclipselink.target-database" value="POSTGRESQL"/>
+      <property name="eclipselink.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="eclipselink.jdbc.url" value="jdbc:postgresql://localhost:5432/stcu_dbp"/>
+      <property name="eclipselink.jdbc.user" value="stcu_admin"/>
+      <property name="eclipselink.jdbc.password" value="admin"/>
+      <property name="eclipselink.logging.level" value="ALL" /> -->
+      <property name="eclipselink.target-database" value="POSTGRESQL"/>
+      <property name="eclipselink.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="eclipselink.jdbc.url" value="jdbc:postgresql://localhost:5432/stcu"/>
+      <property name="eclipselink.jdbc.user" value="postgres"/>
+      <property name="eclipselink.jdbc.password" value="postgres"/>
+      <property name="eclipselink.logging.level" value="ALL" />
+      <!-- create-or-extend-tables: EclipseLink will attempt to create tables. If the table exists, EclipseLink will add any missing columns -->
+      <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
+      <!-- drop-and-create-tables: EclipseLink will attempt to DROP all tables, then CREATE all tables.
+      If any issues are encountered, EclipseLink will follow the default behavior of your specific database and JDBC driver combination,
+      then continue with the next statement -->
+      <!--property name="eclipselink.ddl-generation" value="drop-and-create-tables"/-->
+    </properties>
+  </persistence-unit>
+</persistence>

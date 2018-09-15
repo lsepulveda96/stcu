@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Sistema Tracking Colectivos urbanos</title>
+</head>
+
+
+<link href="css/bootstrap.css" rel="stylesheet"/>
+<link href="css/myStyles.css" rel="stylesheet" type="text/css"/>
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Custom CSS -->
+<link href="css/simple-sidebar.css" rel="stylesheet"/>
+<link href="css/ngDialog.css" rel="stylesheet"/>
+<link href="css/ngDialog-theme-default.css" rel="stylesheet"/>
+
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#!/">
+                        <strong>STCU</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#!/colectivos"><strong>COLECTIVOS</strong></a>
+                    <a href="#!/mapa"><strong>MAPA</strong></a>
+                    <a href="#!/parada"><strong>PARADA</strong></a>
+                    <a href="#!/paradas"><strong>PARADAS</strong></a>
+                    <a href="#!/linea"><strong>LINEA</strong></a>
+                    <a href="#!/prueba"><strong>PRUEBA</strong></a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+          <div class="container">
+            <div class="starter-template" ng-app="stcu_app">
+                <div ng-view>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+    <!-- Menu Toggle Script -->
+
+
+<script src="lib/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="lib/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+
+<script src="lib/angular/angular.min.js" type="text/javascript"></script>
+<script src="lib/angular/angular-route.min.js" type="text/javascript"></script>
+<script src="lib/angular/ngDialog.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="js/stcu_app.js"> </script>
+
+<script type="text/javascript" src="js/srvs/srvColectivo.js"> </script>
+<script type="text/javascript" src="js/srvs/srvParada.js"> </script>
+<script type="text/javascript" src="js/srvs/srvLinea.js"> </script>
+<script type="text/javascript" src="js/srvs/srvMapa.js"> </script>
+<script type="text/javascript" src="js/srvs/srvPrueba.js"> </script>
+
+<script type="text/javascript" src="js/ctrls/ctrlColectivo.js"> </script>
+<script type="text/javascript" src="js/ctrls/ctrlParada.js"> </script>
+<script type="text/javascript" src="js/ctrls/ctrlParadas.js"> </script>
+<script type="text/javascript" src="js/ctrls/ctrlMapa.js"> </script>
+<script type="text/javascript" src="js/ctrls/ctrlPrueba.js"> </script>
+<script type="text/javascript" src="js/ctrls/ctrlLinea.js"> </script>
+<script type="text/javascript" src="js/ctrls/ctrlLineas.js"> </script>
+
+</html>
