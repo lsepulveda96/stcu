@@ -38,5 +38,10 @@ app.config(['$routeProvider', function(routeprovider) {
 		templateUrl:'pages/paradaList.html',
 		controller: 'controladorParadas'
 	})
+  .when('/diseño',{
+    templateUrl:'pages/diseño.html',
+    controller: 'controladorDiseño'
+  })
+
 }
 ]);

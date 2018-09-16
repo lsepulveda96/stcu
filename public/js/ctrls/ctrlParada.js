@@ -47,9 +47,9 @@ app.controller('controladorParada', ['$scope','ngDialog','servicioParada', funct
       coorLat = e.latlng.lat;
       coorLng = e.latlng.lng; // Para luego guardarlas // deberan cambiar por Push en un array
 
-      // if (marker != undefined) {
-      //       mymap.removeLayer(marker);
-      // };
+      if (marker != undefined) {
+            mymap.removeLayer(marker);
+      };
 
       // marker = new L.Marker(e.latlng, {draggable:true});
       // mymap.addLayer(marker);
@@ -58,7 +58,9 @@ app.controller('controladorParada', ['$scope','ngDialog','servicioParada', funct
 
       geocodeService.reverse().latlng(e.latlng).run(function(error, result) {
          marker = new L.marker(result.latlng);
-         mymap.addLayer(marker)
+         mymap.addLayer(marker);
+         // L.marker(result.latlng).addTo(mymap).bindPopup(result.address.Match_addr).openPopup();
+         marker.bindPopup(result.address.Match_addr).openPopup();
          direccion = result.address.Match_addr;
          console.log("Direccion: " + direccion);
        });

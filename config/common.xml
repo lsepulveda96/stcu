@@ -211,4 +211,11 @@
     </exec>
   </target>
 
+  <target name="deploy_client">
+    <echo message="deploy to ${SERVER_HOME}/domains/domain1/applications/stcu_app"/>
+    <copy todir="${SERVER_HOME}/glassfish/domains/domain1/applications/stcu_app" failonerror="true">
+      <fileset dir="public"/>
+    </copy>
+  </target>
+
   </project>

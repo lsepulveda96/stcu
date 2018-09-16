@@ -14,7 +14,6 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.core.MediaType;
 import model.Parada;
 import stateless.ParadaService;
-import stateless.PruebaService;
 import java.util.Collection;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
