@@ -96,7 +96,9 @@ app.controller('controladorParada', ['$scope','ngDialog','servicioParada', funct
         L.marker([valor.latitud, valor.longitud]).addTo(mymap)
         // console.log(" latitud : " + valor.latitud + " longitud : " + valor.longitud);
         // L.marker([-42.323423,-65.234233]).addTo(mymap);
-        // .bindPopup("<b>Hola!</b><br />Soy una parada.").openPopup();
+        // .bindPopup("<b>Hola!</b><br />Soy una parada.");
+
+        // traer toda la clase para mostrar la descripcion en popup
       }
 
     });
