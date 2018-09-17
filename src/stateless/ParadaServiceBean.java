@@ -69,8 +69,7 @@ public class ParadaServiceBean implements ParadaService {
 
     // String punto= "-42.777724 -65.0295883";
     Parada parada = new Parada();
-    // parada.setObservacion("Av. Roca 3000");
-    parada.setObservacion(newDireccion);
+    parada.setDireccion(newDireccion);
 
   try{
 
@@ -135,7 +134,7 @@ public class ParadaServiceBean implements ParadaService {
   }
 
   public List<Parada> findAllParadas() {
-    Query query = getEntityManager().createNativeQuery("SELECT codigo,observacion FROM parada");
+    Query query = getEntityManager().createNativeQuery("SELECT codigo,direccion FROM parada");
     List<Object[]> paradas = (List<Object[]>) query.getResultList();
 
     List<Parada> lista = new ArrayList<Parada>();

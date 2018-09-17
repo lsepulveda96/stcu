@@ -15,21 +15,21 @@ public class Parada {
   @Column(name="CODIGO")
   private int codigo;
 
-  @Column(name="OBSERVACION")
-  private String observacion;
+  @Column(name="DIRECCION")
+  private String direccion;
 
   public Parada() {}
 
   public Parada( Object[] rows){
     this.codigo = (int) rows[0];
-    this.observacion = (String) rows[1];
+    this.direccion = (String) rows[1];
   }
 
   public int getCodigo() { return codigo; }
 
   public void setCodigo( int cod ) { this.codigo = cod; }
 
-  public String getObservacion() { return observacion; }
+  public String getDireccion() { return direccion; }
 
-  public void setObservacion( String observacion ) { this.observacion = observacion; }
+  public void setDireccion( String direccion ) { this.direccion = direccion; }
 }

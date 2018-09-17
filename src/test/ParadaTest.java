@@ -59,7 +59,7 @@ public class ParadaTest {
   //
   //   Parada parada = new Parada();
   //
-  //   parada.setObservacion("San Martin 2422");
+  //   parada.setDireccion("San Martin 2422");
   //   em.persist( parada );
   //
   //   em.getTransaction().commit();

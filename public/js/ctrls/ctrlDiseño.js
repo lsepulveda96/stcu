@@ -3,5 +3,4 @@ app.controller("controladorDiseño", ["$scope","$location", "$routeParams", "ser
   $scope.save = function(){
     console.log("Reaccion a Send");
   }
-
 }]);

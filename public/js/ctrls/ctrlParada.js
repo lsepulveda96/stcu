@@ -6,10 +6,11 @@ app.controller('controladorParada', ['$scope','ngDialog','servicioParada', funct
   // console.log("coorLat : " + coorLat + " - coorLng : " + coorLng);
 
   $scope.save = function(){
-    console.log("Cambios guardados");
+    console.log("Parada guardada con exito");
     // console.log("coorLat : " + coorLat + " - coorLng : " + coorLng);
 
     servicio.save(coorLat , coorLng , direccion, function(error, data){
+      alert("Parada guardada con exito");
       if(error){
         console.log(error);
         return;
