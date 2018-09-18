@@ -121,7 +121,7 @@ public class ParadaServiceBean implements ParadaService {
     // Collection<Coordenada> lista = new ArrayList<Coordenada>();
 		// lista.add(coordenada);
 
-    Query q = getEntityManager().createNativeQuery("SELECT (ST_X(coordenada)), (ST_Y(coordenada)) FROM parada");
+    Query q = getEntityManager().createNativeQuery("SELECT (ST_X(coordenada)), (ST_Y(coordenada)), direccion FROM parada");
     List<Object[]> coordenadas = (List<Object[]>) q.getResultList();
 
     List<Coordenada> lista = new ArrayList<Coordenada>();

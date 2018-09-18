@@ -20,7 +20,14 @@ app.controller("controladorLinea", ["$scope","$location", "$routeParams", "servi
       if(error){
         console.log(error);
         return;
-      }
+      } else {
+          $scope.tipomsj="EXITO!";
+          $scope.mensaje = "Los cambios se guardaron correctamente";
+          ngDialog.open({ template: 'pages/msjDialog.html',
+                         className: 'ngdialog-theme-default',
+                   closeByDocument: false,
+                             scope: $scope });
+        }
       $scope.data = data;
       $location.path("/linea")
     });

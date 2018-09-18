@@ -10,10 +10,18 @@ app.controller('controladorParada', ['$scope','ngDialog','servicioParada', funct
     // console.log("coorLat : " + coorLat + " - coorLng : " + coorLng);
 
     servicio.save(coorLat , coorLng , direccion, function(error, data){
-      alert("Parada guardada con exito");
+      // alert("Parada guardada con exito");
+
       if(error){
         console.log(error);
         return;
+      }else {
+        $scope.tipomsj="EXITO!";
+        $scope.mensaje = "Los cambios se guardaron correctamente";
+        ngDialog.open({ template: 'pages/msjDialog.html',
+                       className: 'ngdialog-theme-default',
+                 closeByDocument: false,
+                           scope: $scope });
       }
     });
   }
@@ -92,13 +100,9 @@ app.controller('controladorParada', ['$scope','ngDialog','servicioParada', funct
       $scope.paradas = paradas;
 
       for (var valor of paradas){
-        // console.log("Valor latitud: " + valor.latitud + " - Valor longitud: " + valor.longitud);
         L.marker([valor.latitud, valor.longitud]).addTo(mymap)
         // console.log(" latitud : " + valor.latitud + " longitud : " + valor.longitud);
-        // L.marker([-42.323423,-65.234233]).addTo(mymap);
-        // .bindPopup("<b>Hola!</b><br />Soy una parada.");
-
-        // traer toda la clase para mostrar la descripcion en popup
+         .bindPopup(valor.direccion);
       }
 
     });

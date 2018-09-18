@@ -9,7 +9,7 @@ public class Coordenada {
 
   private Double latitud;
   private Double longitud;
-
+  private String direccion;
 
   public Coordenada(Double latitud, Double longitud) {
     this.latitud = latitud;
@@ -21,6 +21,7 @@ public class Coordenada {
   public Coordenada( Object[] rows){
     this.latitud = (Double) rows[0];
     this.longitud = (Double) rows[1];
+    this.direccion = (String) rows[2];
   }
 
   public Double getLatitud() { return latitud; }
@@ -30,5 +31,9 @@ public class Coordenada {
   public Double getLongitud() { return longitud; }
 
   public void setLongitud( Double longitud ) { this.longitud = longitud; }
+
+  public String getDireccion() { return direccion; }
+
+  public void setDireccion( String direccion ) { this.direccion = direccion; }
 
 }
