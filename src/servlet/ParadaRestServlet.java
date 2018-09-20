@@ -91,44 +91,6 @@ public class ParadaRestServlet {
   }
 
 
-
-
-
-  // para implementar
-
-  // static String consulta = "null";
-  //
-  // @POST
-  // @Path("/consulta")
-  // @Produces(MediaType.APPLICATION_JSON)
-  // public String consultaPost(String json) throws RollbackException, NotSupportedException, IOException {
-  //   consulta = json;
-  //   // Parada parada = service.createParada(newPunto, newDireccion);
-  //   return mapper.writeValueAsString(consulta);
-  // }
-  //
-  // // o en statless
-  //
-  // @GET
-  // @Produces(MediaType.APPLICATION_JSON)
-  // public String consultaGet() throws IOException {
-  //   // List<Coordenada> lista = service.findParada();
-  //   return mapper.writeValueAsString(consulta);
-  // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   // @POST
   // @Path("/massive")
   // @Produces(MediaType.APPLICATION_JSON)
